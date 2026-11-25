@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="Portal layanan dan aplikasi MGMP Kabupaten Jombang.">
+  <title>Portal Layanan MGMP Jombang</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg-color: #f4f6f9;
+      --card-bg: #ffffff;
+      --text-primary: #1e293b;
+      --text-secondary: #64748b;
+      --accent: #0f766e;
+      --accent-hover: #115e59;
+      --border-color: #e2e8f0;
+      --ring: rgba(15, 118, 110, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      background: radial-gradient(ellipse at top, #e6f4f2 0, var(--bg-color) 48%);
+      color: var(--text-primary);
+    }
+
+    .container {
+      width: min(100%, 960px);
+      text-align: center;
+    }
+
+    .header { margin-bottom: 36px; }
+
+    .logo-badge {
+      width: 72px;
+      height: 72px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--accent), #0284c7);
+      box-shadow: 0 10px 24px -8px rgba(15, 118, 110, 0.45);
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .eyebrow {
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: clamp(1.55rem, 4vw, 2rem);
+      font-weight: 750;
+      letter-spacing: -0.035em;
+    }
+
+    .header p, .card-desc, .footer-note { color: var(--text-secondary); }
+    .header p { font-size: 0.98rem; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+      gap: 20px;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+
+    .card {
+      min-height: 248px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 22px 24px;
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      background: var(--card-bg);
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.035);
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 14px 28px -12px rgba(15, 118, 110, 0.28);
+    }
+
+    .card:focus-visible {
+      outline: 3px solid var(--ring);
+      outline-offset: 3px;
+      border-color: var(--accent);
+    }
+
+    .card-icon {
+      display: grid;
+      width: 56px;
+      height: 56px;
+      place-items: center;
+      margin-bottom: 15px;
+      border-radius: 16px;
+      background: #f0fdfa;
+      font-size: 1.8rem;
+    }
+
+    .card-title { margin-bottom: 8px; font-size: 1.08rem; font-weight: 750; }
+    .card-desc { font-size: 0.88rem; line-height: 1.55; }
+
+    .tag {
+      margin-top: auto;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: #f0fdfa;
+      color: var(--accent);
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .footer-note { font-size: 0.82rem; }
+    .footer-note strong { color: var(--text-primary); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <!-- Ganti badge ini dengan logo MGMP jika file logo sudah tersedia. -->
+      <div class="logo-badge" aria-label="MGMP">MGMP</div>
+      <p class="eyebrow">Kabupaten Jombang</p>
+      <h1>Portal Layanan &amp; Aplikasi MGMP</h1>
+      <p>Ruang kolaborasi, berbagi praktik baik, dan pengimbasan antar-guru.</p>
+    </header>
+
+    <section class="grid" aria-label="Layanan MGMP">
+      <!-- Ganti href="#" dengan URL aplikasi yang sesuai saat layanan tersedia. -->
+      <a href="#" class="card" aria-label="Buka layanan Anggota dan Presensi">
+        <span class="card-icon" aria-hidden="true">👨‍🏫</span>
+        <span class="card-title">Anggota &amp; Presensi</span>
+        <span class="card-desc">Kelola data guru anggota, presensi pertemuan, dan dokumentasi kegiatan pengimbasan.</span>
+        <span class="tag">Untuk Guru</span>
+      </a>
+
+      <a href="#" class="card" aria-label="Buka Perangkat Pembelajaran dan Bank Soal">
+        <span class="card-icon" aria-hidden="true">📚</span>
+        <span class="card-title">Perangkat &amp; Bank Soal</span>
+        <span class="card-desc">Berbagi modul ajar, LKPD, praktik baik, dan perangkat pembelajaran antar-sekolah.</span>
+        <span class="tag">Repositori Bersama</span>
+      </a>
+
+      <a href="#" class="card" aria-label="Buka layanan Administrasi Pengurus">
+        <span class="card-icon" aria-hidden="true">🗂️</span>
+        <span class="card-title">Administrasi Pengurus</span>
+        <span class="card-desc">Akses program kerja, notulensi, surat-menyurat, dan laporan kegiatan MGMP.</span>
+        <span class="tag">Khusus Pengurus</span>
+      </a>
+    </section>
+
+    <p class="footer-note">Portal MGMP Kabupaten Jombang <strong>•</strong> Layanan dibuka pada tab baru setelah URL aplikasi diatur.</p>
+  </main>
+</body>
+</html>
